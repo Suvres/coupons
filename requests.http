@@ -1,0 +1,20 @@
+###
+POST http://localhost:8080/coupon/new 
+content-type: application/json
+
+{
+    "name": "test12",
+    "maxUse": 5,
+    "country": "PL"
+}
+
+###
+GET http://localhost:8080/ 
+
+###
+PUT http://localhost:8080/coupon/use/test
+content-type: application/json
+
+{
+    "userId": "abc"
+}

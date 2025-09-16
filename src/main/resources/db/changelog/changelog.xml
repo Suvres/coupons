@@ -18,7 +18,7 @@
             <constraints nullable="false" />
         </column>
 
-         <column name="createDate" type="datetime">
+         <column name="create_date" type="datetime">
             <constraints nullable="false" />
          </column>
 
@@ -46,4 +46,17 @@
          </column>
       </createTable>
    </changeSet>
+
+   <changeSet id="3" author="Suvres">
+      <createSequence sequenceName="coup_seq"
+         cacheSize="0"
+         cycle="false"/>
+   </changeSet>
+
+   <changeSet id="4" author="Suvres">
+      <createSequence sequenceName="coup_use_seq"
+         cacheSize="0"
+         cycle="false"/>
+   </changeSet>
+
 </databaseChangeLog>
