@@ -9,8 +9,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
@@ -18,6 +20,8 @@ import lombok.Setter;
 @Entity
 @Table(name = "coupon")
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Coupon {
 
     @Id
@@ -35,5 +39,9 @@ public class Coupon {
     public String toString() {
         return "Coupon: name: " + name + ", maxOfUse: " + maxOfUseCount + ", useCount: " + useCount + ", createDate: " 
         + createDate.format(DateTimeFormatter.ISO_DATE_TIME) + ", country: " + country + "; ";
+    }
+
+    public void incrementUseCount() {
+        this.useCount++;
     }
 }

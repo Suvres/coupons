@@ -7,5 +7,6 @@ import coupon.coupon.entities.CouponUse;
 
 @Repository
 public interface CouponUseRepository extends JpaRepository<CouponUse, Long> {
-
+    
+    public boolean existsByCouponAndUserId(String name, String userId);
 }

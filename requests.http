@@ -3,7 +3,7 @@ POST http://localhost:8080/coupon/new
 content-type: application/json
 
 {
-    "name": "test12",
+    "name": "test2",
     "maxUse": 5,
     "country": "PL"
 }
@@ -12,7 +12,7 @@ content-type: application/json
 GET http://localhost:8080/ 
 
 ###
-PUT http://localhost:8080/coupon/use/test
+PUT http://localhost:8080/coupon/use/test12
 content-type: application/json
 
 {
