@@ -2,6 +2,7 @@ package coupon.coupon.service;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 import java.util.Optional;
 
@@ -38,9 +39,9 @@ public class CouponService {
             return ResponseCouponDto.badRequest(String.format(ResponseMsg.COUPON_EXIST.getDescription(), newCoupon.name()));
         }
 
-        String[] countries = Locale.getISOCountries(); 
+        List<String> countries = Arrays.asList(Locale.getISOCountries()); 
 
-        if(!Arrays.asList(countries).contains(newCoupon.country().toUpperCase().trim())) {
+        if(!countries.contains(newCoupon.country().trim())) {
             return ResponseCouponDto.badRequest(String.format(ResponseMsg.INVALID_COUNTRY.getDescription(), newCoupon.country()));
         }
         

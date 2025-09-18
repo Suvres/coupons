@@ -12,7 +12,7 @@ content-type: application/json
 GET http://localhost:8080/ 
 
 ###
-PUT http://localhost:8080/coupon/use/test12
+PUT http://localhost:8080/coupon/use/test2
 content-type: application/json
 
 {
